@@ -32,7 +32,7 @@
 #include "base/kaldi-error.h"
 #include "itf/online-feature-itf.h"
 #include "online2/online-endpoint.h"
-#include "online2/online-nnet2-feature-pipeline.h"
+#include "online2/online-feature-pipeline.h"
 #include "decoder/lattice-faster-online-decoder.h"
 #include "hmm/transition-model.h"
 #include "hmm/posterior.h"
@@ -55,7 +55,7 @@ class SingleUtteranceNnet3Decoder {
                               const TransitionModel &trans_model,
                               const nnet3::DecodableNnetSimpleLoopedInfo &info,
                               const fst::Fst<fst::StdArc> &fst,
-                              OnlineNnet2FeaturePipeline *features);
+                              OnlineFeatureInterface *features);
 
   /// advance the decoding as far as we can.
   void AdvanceDecoding();

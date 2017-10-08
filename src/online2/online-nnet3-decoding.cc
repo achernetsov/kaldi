@@ -29,12 +29,12 @@ SingleUtteranceNnet3Decoder::SingleUtteranceNnet3Decoder(
     const TransitionModel &trans_model,
     const nnet3::DecodableNnetSimpleLoopedInfo &info,
     const fst::Fst<fst::StdArc> &fst,
-    OnlineNnet2FeaturePipeline *features):
+    OnlineFeatureInterface *features):
     decoder_opts_(decoder_opts),
     input_feature_frame_shift_in_seconds_(features->FrameShiftInSeconds()),
     trans_model_(trans_model),
     decodable_(trans_model_, info,
-               features->InputFeature(), features->IvectorFeature()),
+               features, NULL),
     decoder_(fst, decoder_opts_) {
   decoder_.InitDecoding();
 }

@@ -1,0 +1,6 @@
+online decoding for http://alphacephei.com/kaldi/kaldi-ru-0.2.tar.gz
+using OnlineFeaturePipeline
+
+1. download model
+2. compile kaldi
+3. run decode-online.sh
