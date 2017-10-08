@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# online recognition for kaldi-ru-0.2 (all credits to Nikolay Shmyrev)
-# based on original decode.sh, and http://kaldi-asr.org/doc/online_decoding.html
+# online recognition for kaldi-ru-0.2 (all credits to Nikolay Shmyrev)a
 
 export KALDI_ROOT=/home/artyom/projects/lab/kaldi
 
